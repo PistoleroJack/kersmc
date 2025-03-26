@@ -4,46 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KersMC Info</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
 
-<header>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <h1 onclick="location.href='index.html'">KersMC</h1>
-    <a href="login.html" class="login-btn">Inloggen</a>
-    <nav id="menu">
-        <a href="index.html">KersMC</a>
-        <a href="info.html">Info</a>
-        <a href="discord.html">Discord</a>
-        <a href="content.html">Content</a>
-    </nav>
-</header>
-
-<main class="info">
-    <h2>KersMC IP:</h2>
-    <div class="columns">
-        <div class="column">
-            <h3>Java IP:</h3>
-            <p>IP: play.kersmc.nl</p>
-        </div>
-        <div class="column">
-            <h3>Bedrock IP:</h3>
-            <p>IP: play.kersmc.nl</p>
-            <p>Poort: 38569</p>
-        </div>
+<nav class="navbar is-fixed-top has-shadow">
+    <div class="navbar-brand">
+        <a class="navbar-item title" href="index.html">KersMC</a>
     </div>
-    <img src="KersMC_logo.png" alt="KersMC Logo" class="center-logo">
-</main>
+</nav>
 
-<footer>
+<section class="section">
+    <div class="container has-text-centered">
+        <h1 class="title">KersMC IP:</h1>
+        <div class="columns">
+            <div class="column">
+                <h2 class="subtitle">Java IP:</h2>
+                <p>play.kersmc.nl</p>
+            </div>
+            <div class="column">
+                <h2 class="subtitle">Bedrock IP:</h2>
+                <p>play.kersmc.nl</p>
+                <p>Poort: 38569</p>
+            </div>
+        </div>
+        <img src="KersMC_logo.png" alt="KersMC Logo" class="image is-128x128">
+    </div>
+</section>
+
+<footer class="footer has-text-centered">
     <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
-    <a href="discord.html">
-        <img src="discord-icon.png" alt="Discord">
-    </a>
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
