@@ -45,20 +45,32 @@
             padding: 10px 15px;
             cursor: pointer;
         }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 1px solid black;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <section class="header-bar">
-        <a href="index.html" class="title is-1" style="text-decoration: none; color: black;">KersMC</a>
+        <h1 class="title is-1"><a href="./" style="color: black; text-decoration: none;">KersMC</a></h1>
         <button class="login-button" id="loginButton">Login</button>
         <div class="buttons-container">
-            <a href="/info" class="button is-light">Info & IP</a>
-            <a href="/content" class="button is-light">KersMC content</a>
-            <a href="/discord" class="button is-light">Discord server</a>
-            <a href="/team" class="button is-light">Het team</a>
+            <a href="./info" class="button is-light">Info & IP</a>
+            <a href="./content" class="button is-light">KersMC content</a>
+            <a href="./discord" class="button is-light">Discord server</a>
+            <a href="./team" class="button is-light">Het team</a>
         </div>
     </section>
-</body>
 
     <section class="section">
         <div class="columns">
@@ -68,7 +80,7 @@
             <div class="column is-half">
                 <h2 class="title is-2">Welkom bij KersMC</h2>
                 <p>KersMC biedt een leuke Minecraft server die altijd voor iedereen toegankelijk is. Je kan joinen via Java en via Bedrock.</p>
-                <p>In de Discord server van KersMC kan je gezellig meepraten met de andere mensen, je kan er vragen stellen en de nieuwste updates als eerste meekrijgen, voor meer informatie <a href="discord.html">klik je hier</a>.</p>
+                <p>In de Discord server van KersMC kan je gezellig meepraten met de andere mensen, je kan er vragen stellen en de nieuwste updates als eerste meekrijgen, voor meer informatie <a href="./discord">klik je hier</a>.</p>
                 <p>Discord is gratis, dus maak snel een account aan.</p>
                 <p>Tot snel op KersMC!</p>
                 <p></p>
