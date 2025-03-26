@@ -4,38 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KersMC Content</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
 
-<header>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <h1 onclick="location.href='index.html'">KersMC</h1>
-    <a href="login.html" class="login-btn">Inloggen</a>
-    <nav id="menu">
-        <a href="index.html">KersMC</a>
-        <a href="info.html">Info</a>
-        <a href="discord.html">Discord</a>
-        <a href="content.html">Content</a>
-    </nav>
-</header>
-
-<main class="content">
-    <h2>KersMC Content</h2>
-    <div class="video-links">
-        <a href="https://www.youtube.com/@Tieskuhh/featured" target="_blank">Tieskuhh YouTube</a>
-        <a href="https://www.youtube.com/@MarsKoeker/featured" target="_blank">MarsKoeker YouTube</a>
+<nav class="navbar is-fixed-top has-shadow">
+    <div class="navbar-brand">
+        <a class="navbar-item title" href="index.html">KersMC</a>
     </div>
-</main>
+</nav>
 
-<footer>
+<section class="section">
+    <div class="container has-text-centered">
+        <h1 class="title">KersMC Content</h1>
+        <div class="buttons">
+            <a href="https://www.youtube.com/@Tieskuhh/featured" class="button is-danger" target="_blank">Tieskuhh YouTube</a>
+            <a href="https://www.youtube.com/@MarsKoeker/featured" class="button is-danger" target="_blank">MarsKoeker YouTube</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer has-text-centered">
     <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
-    <a href="discord.html">
-        <img src="discord-icon.png" alt="Discord">
-    </a>
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
