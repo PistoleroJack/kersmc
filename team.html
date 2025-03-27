@@ -4,65 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KersMC - Het Team</title>
-    <link rel="icon" type="image/png" href="afbeeldingen/KersMC_logo.png"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="icon" type="image/png" href="KersMC_logo.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"> 
+    <link rel="stylesheet" href="kersmc_styles.css">
 </head>
 <body>
-    <header class="header-bar">
-        <div class="container">
-            <h1 class="title"><a href="/kersmc" class="header-logo">KersMC</a></h1>
-            <nav class="nav-links">
-                <a href="/kersmc/info" class="button is-light">Info & IP</a>
-                <a href="/kersmc/content" class="button is-light">KersMC Content</a>
-                <a href="/kersmc/discord" class="button is-light">Discord Server</a>
-                <a href="/kersmc/team" class="button is-light">Het Team</a>
-            </nav>
-            <button class="login-button" onclick="window.location.href='/kersmc/login'">Login</button>
+    <section class="header-bar">
+        <h1 class="title is-1"><a href="/kersmc" style="color: black; text-decoration: none;">KersMC</a></h1>
+        <button class="login-button" id="loginButton">Login</button>
+        <div class="buttons-container">
+            <a href="/kersmc/info" class="button is-light">Info & IP</a>
+            <a href="/kersmc/content" class="button is-light">KersMC Content</a>
+            <a href="/kersmc/discord" class="button is-light">Discord Server</a>
+            <a href="/kersmc/team" class="button is-light">Het Team</a>
         </div>
-    </header>
+    </section>
 
-    <main class="section">
-        <div class="container">
-            <div class="columns is-multiline is-centered">
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Tieskuhh.png" alt="Tieskuhh">
-                    <h2 class="title is-4">Tieskuhh</h2>
-                    <p class="subtitle is-6">Eigenaar</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Tijn.png" alt="Tijn">
-                    <h2 class="title is-4">Tijn</h2>
-                    <p class="subtitle is-6">Eigenaar</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Marskoenker.png" alt="MarsKoenker">
-                    <h2 class="title is-4">MarsKoenker</h2>
-                    <p class="subtitle is-6">Hoofd Moderator</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Noëlvdsterren.jpeg" alt="Noëlvdsterren">
-                    <h2 class="title is-4">Noëlvdsterren</h2>
-                    <p class="subtitle is-6">Moderator</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Juultieee.jpeg" alt="xJuultieee_">
-                    <h2 class="title is-4">xJuultieee_</h2>
-                    <p class="subtitle is-6">Moderator</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Pistolerojack.png" alt="Pistolerojack">
-                    <h2 class="title is-4">Pistolerojack</h2>
-                    <p class="subtitle is-6">Moderator</p>
-                </div>
+    <section class="section">
+        <div class="columns is-multiline is-centered">
+            <div class="column is-half team-member">
+                <img src="team-members/Tieskuhh.png" alt="Tieskuhh">
+                <h2 class="title is-4">Tieskuhh</h2>
+                <p class="subtitle is-6">Eigenaar</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="team-members/Tijn.png" alt="Tijn">
+                <h2 class="title is-4">Tijn</h2>
+                <p class="subtitle is-6">Eigenaar</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="team-members/Marskoenker.png" alt="MarsKoenker">
+                <h2 class="title is-4">MarsKoenker</h2>
+                <p class="subtitle is-6">Hoofd Moderator</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="team-members/Noëlvdsterren.jpeg" alt="Noëlvdsterren">
+                <h2 class="title is-4">Noëlvdsterren</h2>
+                <p class="subtitle is-6">Moderator</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="team-members/Juultieee.jpeg" alt="xJuultieee_">
+                <h2 class="title is-4">xJuultieee_</h2>
+                <p class="subtitle is-6">Moderator</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="team-members/Pistolerojack.png" alt="Pistolerojack">
+                <h2 class="title is-4">Pistolerojack</h2>
+                <p class="subtitle is-6">Moderator</p>
+                <p><><></p>
             </div>
         </div>
-    </main>
+    </section>
 
     <footer class="footer">
         <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+            window.location.href = "/kersmc/inlog";
+        });
+    </script>
 </body>
 </html>
