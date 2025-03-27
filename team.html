@@ -1,7 +1,17 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KersMC - Het Team</title>
+    <link rel="icon" type="image/png" href="KersMC_logo.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"> 
+    <link rel="stylesheet" href="kersmc_styles.css">
+</head>
 <body>
     <section class="header-bar">
         <h1 class="title is-1"><a href="/kersmc" style="color: black; text-decoration: none;">KersMC</a></h1>
-        <button class="login-button" id="loginButton" onclick="window.location.href='/kersmc/login'">Login</button> <!-- Corrected login path -->
+        <button class="login-button" id="loginButton">Login</button>
         <div class="buttons-container">
             <a href="/kersmc/info" class="button is-light">Info & IP</a>
             <a href="/kersmc/content" class="button is-light">KersMC Content</a>
@@ -55,7 +65,10 @@
         <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
     </footer>
 
-    <!-- External JavaScript file added for future scripts -->
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+            window.location.href = "/kersmc/inlog";
+        });
+    </script>
 </body>
 </html>
