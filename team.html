@@ -3,37 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KersMC</title>
-    <link rel="icon" type="image/png" href="KersMC_logo.png"> <!-- Tabblad afbeelding -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"> <!-- Bulma CSS -->
+    <title>KersMC - Het Team</title>
+    <link rel="icon" type="image/png" href="KersMC_logo.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"> 
     <style>
-        .banner {
-            width: 100%;
-            height: auto;
-        }
         .header-bar {
             background-color: #A0C213;
             color: black;
-            padding: 60px 10%;
+            padding: 20px;
             text-align: center;
-            position: relative;
         }
         .header-bar h1 {
-            font-size: 4rem;
-        }
-        .section {
-            padding: 30px 10%;
-        }
-        .footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #f4f4f4;
+            font-size: 3rem;
         }
         .buttons-container {
-            margin-top: 20px;
+            margin-top: 10px;
         }
-        .header-bar .button {
-            margin: 10px;
+        .buttons-container a {
+            margin: 5px;
         }
         .login-button {
             position: absolute;
@@ -45,68 +32,76 @@
             padding: 10px 15px;
             cursor: pointer;
         }
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            border: 1px solid black;
-            padding: 20px;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .section {
+            padding: 30px 10%;
+        }
+        .team-member {
             text-align: center;
+            padding: 20px;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
         }
     </style>
 </head>
 <body>
     <section class="header-bar">
-        <h1 class="title is-1"><a href="./" style="color: black; text-decoration: none;">KersMC</a></h1>
+        <h1 class="title is-1"><a href="/kersmc" style="color: black; text-decoration: none;">KersMC</a></h1>
         <button class="login-button" id="loginButton">Login</button>
         <div class="buttons-container">
-            <a href="./info" class="button is-light">Info & IP</a>
-            <a href="./content" class="button is-light">KersMC content</a>
-            <a href="./discord" class="button is-light">Discord server</a>
-            <a href="./team" class="button is-light">Het team</a>
+            <a href="/kersmc/info" class="button is-light">Info & IP</a>
+            <a href="/kersmc/content" class="button is-light">KersMC Content</a>
+            <a href="/kersmc/discord" class="button is-light">Discord Server</a>
+            <a href="/kersmc/team" class="button is-light">Het Team</a>
         </div>
     </section>
-    <section class="team-container">
-        <div class="team-member">
-            <img src="Tieskuhh.png" alt="Tieskuhh">
-            <h2>Tieskuhh</h2>
-            <h3>Eigenaar</h3>
-            <p><><></p>
-        </div>
-        <div class="team-member">
-            <img src="Tijn.png" alt="Tijn">
-            <h2>Tijn</h2>
-            <h3>Eigenaar</h3>
-            <p><><></p>
-        </div>
-        <div class="team-member">
-            <img src="Marskoenker.png" alt="MarsKoenker">
-            <h2>MarsKoenker</h2>
-            <h3>Hoofd Moderator</h3>
-            <p><><></p>
-        </div>
-        <div class="team-member">
-            <img src="Noëlvdsterren.jpeg" alt="Noëlvdsterren">
-            <h2>Noëlvdsterren</h2>
-            <h3>Moderator</h3>
-            <p><><></p>
-        </div>
-        <div class="team-member">
-            <img src="Juultieee.jpeg" alt="xJuultieee_">
-            <h2>xJuultieee_</h2>
-            <h3>Moderator</h3>
-            <p><><></p>
-        </div>
-        <div class="team-member">
-            <img src="Pistolerojack.png" alt="Pistolerojack">
-            <h2>Pistolerojack</h2>
-            <h3>Moderator</h3>
-            <p><><></p>
+
+    <section class="section">
+        <div class="columns is-multiline is-centered">
+            <div class="column is-half team-member">
+                <img src="Tieskuhh.png" alt="Tieskuhh">
+                <h2 class="title is-4">Tieskuhh</h2>
+                <p class="subtitle is-6">Eigenaar</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="Tijn.png" alt="Tijn">
+                <h2 class="title is-4">Tijn</h2>
+                <p class="subtitle is-6">Eigenaar</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="Marskoenker.png" alt="MarsKoenker">
+                <h2 class="title is-4">MarsKoenker</h2>
+                <p class="subtitle is-6">Hoofd Moderator</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="Noëlvdsterren.jpeg" alt="Noëlvdsterren">
+                <h2 class="title is-4">Noëlvdsterren</h2>
+                <p class="subtitle is-6">Moderator</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="Juultieee.jpeg" alt="xJuultieee_">
+                <h2 class="title is-4">xJuultieee_</h2>
+                <p class="subtitle is-6">Moderator</p>
+                <p><><></p>
+            </div>
+            <div class="column is-half team-member">
+                <img src="Pistolerojack.jpg" alt="Pistolerojack">
+                <h2 class="title is-4">Pistolerojack</h2>
+                <p class="subtitle is-6">Moderator</p>
+                <p><><></p>
+            </div>
         </div>
     </section>
 
