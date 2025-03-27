@@ -3,66 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KersMC - Het Team</title>
-    <link rel="icon" type="image/png" href="afbeeldingen/KersMC_logo.png"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Login - Farming Boys</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .login-container p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .login-container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            background-color: #A0C213;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #8cab11;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header class="header-bar">
-        <div class="container">
-            <h1 class="title"><a href="/kersmc" class="header-logo">KersMC</a></h1>
-            <nav class="nav-links">
-                <a href="/kersmc/info" class="button is-light">Info & IP</a>
-                <a href="/kersmc/content" class="button is-light">KersMC Content</a>
-                <a href="/kersmc/discord" class="button is-light">Discord Server</a>
-                <a href="/kersmc/team" class="button is-light">Het Team</a>
-            </nav>
-            <button class="login-button" onclick="window.location.href='/kersmc/login'">Login</button>
-        </div>
-    </header>
+    <div class="login-container">
+        <h1>KersMC Inlog</h1>
+        <p>Wachtwoord invoeren</p>
+        <input type="password" id="passwordInput" placeholder="Voer je wachtwoord in">
+        <p id="errorMessage" class="error-message" style="display: none;">Onjuist wachtwoord. Probeer opnieuw.</p>
+        <button id="loginButton">Inloggen</button>
+    </div>
 
-    <main class="section">
-        <div class="container">
-            <div class="columns is-multiline is-centered">
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Tieskuhh.png" alt="Tieskuhh">
-                    <h2 class="title is-4">Tieskuhh</h2>
-                    <p class="subtitle is-6">Eigenaar</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Tijn.png" alt="Tijn">
-                    <h2 class="title is-4">Tijn</h2>
-                    <p class="subtitle is-6">Eigenaar</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Marskoenker.png" alt="MarsKoenker">
-                    <h2 class="title is-4">MarsKoenker</h2>
-                    <p class="subtitle is-6">Hoofd Moderator</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Noëlvdsterren.jpeg" alt="Noëlvdsterren">
-                    <h2 class="title is-4">Noëlvdsterren</h2>
-                    <p class="subtitle is-6">Moderator</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Juultieee.jpeg" alt="xJuultieee_">
-                    <h2 class="title is-4">xJuultieee_</h2>
-                    <p class="subtitle is-6">Moderator</p>
-                </div>
-                <div class="column is-one-third team-member">
-                    <img src="team-members/Pistolerojack.png" alt="Pistolerojack">
-                    <h2 class="title is-4">Pistolerojack</h2>
-                    <p class="subtitle is-6">Moderator</p>
-                </div>
-            </div>
-        </div>
-    </main>
+    <script>
+        const loginButton = document.getElementById('loginButton');
+        const passwordInput = document.getElementById('passwordInput');
+        const errorMessage = document.getElementById('errorMessage');
 
-    <footer class="footer">
-        <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
-    </footer>
+        // Correcte wachtwoorden en bijbehorende routes
+        const routes = {
+            "FarmInlog": "index.html",
+            "DiscordMod": "index.html",
+            "NJJ": "njj-groep.html"
+        };
 
-    <script src="script.js"></script>
+        loginButton.addEventListener('click', () => {
+            const enteredPassword = passwordInput.value;
+
+            // Controleer of het ingevoerde wachtwoord geldig is
+            if (routes[enteredPassword]) {
+                sessionStorage.setItem('loggedIn', 'true'); // Markeer gebruiker als ingelogd
+                window.location.href = routes[enteredPassword]; // Stuur naar de juiste pagina
+            } else {
+                errorMessage.style.display = 'block'; // Toon foutmelding
+            }
+        });
+    </script>
 </body>
 </html>
