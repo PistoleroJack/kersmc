@@ -6,7 +6,59 @@
     <title>KersMC</title>
     <link rel="icon" type="image/png" href="KersMC_logo.png"> <!-- Tabblad afbeelding -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"> <!-- Bulma CSS -->
-    <link rel="stylesheet" href="styles.css"> <!-- Nieuw CSS-bestand -->
+    <style>
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+        .header-bar {
+            background-color: #A0C213;
+            color: black;
+            padding: 60px 10%;
+            text-align: center;
+            position: relative;
+        }
+        .header-bar h1 {
+            font-size: 4rem;
+        }
+        .section {
+            padding: 30px 10%;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        .buttons-container {
+            margin-top: 20px;
+        }
+        .header-bar .button {
+            margin: 10px;
+        }
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 1px solid black;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <section class="header-bar">
@@ -31,8 +83,8 @@
                 <p>In de Discord server van KersMC kan je gezellig meepraten met de andere mensen, je kan er vragen stellen en de nieuwste updates als eerste meekrijgen, voor meer informatie <a href="./discord">klik je hier</a>.</p>
                 <p>Discord is gratis, dus maak snel een account aan.</p>
                 <p>Tot snel op KersMC!</p>
-                <br> <!-- Extra enter toegevoegd -->
-                <h2 class="title is-2">Over KersMC</h2>
+                <p></p>
+                  <h2 class="title is-2">Over KersMC</h2>
                 <p>KersMC is begonnen aan season 2: Hardcore! Als je dood gaat kan je een uur niet spelen! Durf jij het aan?</p>
                 <p>Durf jij nog aan om mee te spelen? Dit seizoen staat pvp ook aan, maar is alleen toegestaan in speciale gevallen. Voor extra uitleg kan je natuurlijk altijd terecht bij een moderator, in de Minecraft server of in de Discord server. Stel gerust al je vragen, de moderators zullen al je vragen zo snel mogelijk beantwoorden.</p>
             </div>
@@ -70,7 +122,7 @@
             } else {
                 loginButton.textContent = 'Login';
                 loginButton.onclick = () => {
-                    window.location.href = '/kersmc/login'; // Correcte login pagina
+                    window.location.href = 'login.html';
                 };
             }
         }
