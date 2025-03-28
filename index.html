@@ -4,71 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KersMC</title>
-    <link rel="icon" type="image/png" href="KersMC_logo.png"> <!-- Tabblad afbeelding -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"> <!-- Bulma CSS -->
+    <link rel="icon" type="image/png" href="KersMC_logo.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
     <style>
-        .banner {
-            width: 100%;
-            height: auto;
-        }
         .header-bar {
-            background-color: #A0C213;
-            color: black;
-            padding: 60px 10%;
+            background-color: #ff0707; /* Aangepaste rode kleur */
+            color: white;
+            padding: 30px 10%;
             text-align: center;
-            position: relative;
         }
         .header-bar h1 {
-            font-size: 4rem;
+            font-size: 3rem;
+            margin: 0;
+        }
+        .buttons-container {
+            margin-top: 10px;
+        }
+        .header-bar .button {
+            margin: 5px;
+        }
+        .login-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 5px 10px;
+            cursor: pointer;
         }
         .section {
-            padding: 30px 10%;
+            text-align: center;
+            padding: 50px;
+            font-size: 1.5rem;
         }
         .footer {
             text-align: center;
             padding: 10px;
             background-color: #f4f4f4;
-        }
-        .buttons-container {
-            margin-top: 20px;
-        }
-        .header-bar .button {
-            margin: 10px;
-        }
-        .login-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: white;
-            color: black;
-            border: 1px solid black;
-            padding: 10px 15px;
-            cursor: pointer;
-        }
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            border: 1px solid black;
-            padding: 20px;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
     <section class="header-bar">
-        <h1 class="title is-1"><a href="./" style="color: black; text-decoration: none;">KersMC</a></h1>
-        <button class="login-button" id="loginButton">Login</button>
+        <h1 class="title is-1"><a href="/kersmc" style="color: white; text-decoration: none;">KersMC</a></h1>
+        <button class="login-button" onclick="window.location.href='/kersmc/login'">Login</button>
         <div class="buttons-container">
-            <a href="./info" class="button is-light">Info & IP</a>
-            <a href="./content" class="button is-light">KersMC content</a>
-            <a href="./discord" class="button is-light">Discord server</a>
-            <a href="./team" class="button is-light">Het team</a>
+            <a href="/kersmc/info" class="button is-light">Info & IP</a>
+            <a href="/kersmc/content" class="button is-light">Content</a>
+            <a href="/kersmc/map" class="button is-light">Map</a>
+            <a href="/kersmc/shop" class="button is-light">Shop</a>
+            <a href="/kersmc/discord" class="button is-light">Discord</a>
+            <a href="/kersmc/team" class="button is-light">Team</a>
         </div>
     </section>
 
@@ -94,59 +82,5 @@
     <footer class="footer">
         <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
     </footer>
-
-    <div class="popup" id="logoutPopup">
-        <div class="popup-header">
-            <h3>Wil je uitloggen?</h3>
-            <button class="popup-close" id="logoutClose">&times;</button>
-        </div>
-        <div class="popup-buttons">
-            <button class="button is-success" id="logoutYes">Ja, uitloggen</button>
-            <button class="button is-danger" id="logoutNo">Nee, ingelogd blijven</button>
-        </div>
-    </div>
-
-    <script>
-        const loginButton = document.getElementById('loginButton');
-        const logoutPopup = document.getElementById('logoutPopup');
-        const logoutClose = document.getElementById('logoutClose');
-        const logoutYes = document.getElementById('logoutYes');
-        const logoutNo = document.getElementById('logoutNo');
-
-        let isLoggedIn = sessionStorage.getItem('loggedIn') === 'true';
-
-        function updateLoginButton() {
-            if (isLoggedIn) {
-                loginButton.textContent = 'Ingelogd';
-                loginButton.onclick = openLogoutPopup;
-            } else {
-                loginButton.textContent = 'Login';
-                loginButton.onclick = () => {
-                    window.location.href = 'login.html';
-                };
-            }
-        }
-
-        function openLogoutPopup() {
-            logoutPopup.style.display = 'block';
-        }
-
-        function closeLogoutPopup() {
-            logoutPopup.style.display = 'none';
-        }
-
-        function logout() {
-            sessionStorage.removeItem('loggedIn');
-            isLoggedIn = false;
-            closeLogoutPopup();
-            updateLoginButton();
-        }
-
-        logoutClose.addEventListener('click', closeLogoutPopup);
-        logoutNo.addEventListener('click', closeLogoutPopup);
-        logoutYes.addEventListener('click', logout);
-
-        updateLoginButton();
-    </script>
 </body>
 </html>
