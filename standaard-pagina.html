@@ -4,13 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KersMC</title>
-    <link rel="icon" type="image/png" href="KersMC_logo.png">
+    <link rel="icon" type="image/png" href="KersMC_logo.png"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        .header-bar {
+            background-color: #A0C213;
+            color: black;
+            padding: 60px 10%;
+            text-align: center;
+        }
+        .header-bar h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+        .buttons-container {
+            margin-top: 20px;
+        }
+        .header-bar .button {
+            margin: 10px;
+        }
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .section {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.5rem;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     <section class="header-bar">
         <h1 class="title is-1"><a href="/kersmc" style="color: black; text-decoration: none;">KersMC</a></h1>
-        <button class="login-button" id="loginButton">Login</button>
+        <button class="login-button" onclick="window.location.href='/kersmc/login'">Login</button>
         <div class="buttons-container">
             <a href="/kersmc/info" class="button is-light">Info & IP</a>
             <a href="/kersmc/content" class="button is-light">KersMC Content</a>
@@ -19,18 +58,12 @@
         </div>
     </section>
 
-    <section class="section has-text-centered">
-        <h2 class="title is-3">Aan deze pagina wordt nog gewerkt.</h2>
+    <section class="section">
+        <p>Aan deze pagina wordt nog gewerkt.</p>
     </section>
 
     <footer class="footer">
         <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
     </footer>
-
-    <script>
-        document.getElementById("loginButton").addEventListener("click", function() {
-            window.location.href = "/kersmc/login";
-        });
-    </script>
 </body>
 </html>
