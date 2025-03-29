@@ -3,69 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KersMC</title>
-    <link rel="icon" type="image/png" href="KersMC_logo.png"> 
+    <title>Info & IP - KersMC</title>
+    <link rel="icon" type="image/png" href="KersMC_logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
     <style>
-        .header-bar {
-            background-color: #ff0707; /* Aangepaste rode kleur */
-            color: white;
+        .section {
             padding: 30px 10%;
             text-align: center;
         }
-        .header-bar h1 {
+        .title {
             font-size: 3rem;
-            margin: 0;
         }
-        .buttons-container {
-            margin-top: 10px;
+        .subtitle {
+            font-size: 2rem;
         }
-        .header-bar .button {
-            margin: 5px;
-        }
-        .login-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: white;
-            color: black;
-            border: 1px solid black;
-            padding: 5px 10px;
+        .copy-box {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
             cursor: pointer;
-        }
-        .section {
-            text-align: center;
-            padding: 50px;
-            font-size: 1.5rem;
-        }
-        .footer {
-            text-align: center;
-            padding: 10px;
             background-color: #f4f4f4;
-            margin-top: 50px;
+        }
+        .copy-box:hover {
+            background-color: #ddd;
+        }
+        .red-line {
+            width: 80%;
+            height: 4px;
+            background-color: #A0C213;
+            margin: 30px auto;
         }
     </style>
 </head>
 <body>
-    <section class="header-bar">
-        <h1 class="title is-1"><a href="/kersmc" style="color: white; text-decoration: none;">KersMC</a></h1>
-        <button class="login-button" onclick="window.location.href='/kersmc/login'">Login</button>
-        <div class="buttons-container">
-            <a href="/kersmc/info" class="button is-light">Info & IP</a>
-            <a href="/kersmc/content" class="button is-light">Content</a>
-            <a href="/kersmc/map" class="button is-light">Map</a>
-            <a href="/kersmc/shop" class="button is-light">Shop</a>
-            <a href="/kersmc/discord" class="button is-light">Discord</a>
-            <a href="/kersmc/team" class="button is-light">Team</a>
-        </div>
-    </section>
-
     <section class="section">
-        <p>Aan deze pagina wordt nog gewerkt.</p>
+        <h1 class="title">IP</h1>
+        <div class="columns">
+            <div class="column has-text-centered">
+                <h2 class="subtitle">Java</h2>
+                <div class="copy-box" onclick="copyToClipboard('play.kersmc.nl')">IP: play.kersmc.nl</div>
+            </div>
+            <div class="column has-text-centered">
+                <h2 class="subtitle">Bedrock</h2>
+                <div class="copy-box" onclick="copyToClipboard('play.kersmc.nl')">IP: play.kersmc.nl</div>
+                <div class="copy-box" onclick="copyToClipboard('38364')">Poort: 38364</div>
+            </div>
+        </div>
+        <div class="red-line"></div>
+        <h1 class="title">Regels</h1>
     </section>
 
-    <footer class="footer">
-        <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
-    </footer>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Gekopieerd: ' + text);
+            }).catch(err => {
+                console.error('Fout bij kopiëren:', err);
+            });
+        }
+    </script>
 </body>
 </html>
