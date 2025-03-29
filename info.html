@@ -44,6 +44,22 @@
             background-color: #ff0707;
             margin: 20px auto;
         }
+        .copy-box {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s;
+        }
+        .copy-box:hover {
+            background-color: #e0e0e0;
+        }
+        .copy-box::after {
+            content: '\1F4CB';
+            margin-left: 10px;
+        }
         .rules-container {
             display: flex;
             justify-content: center;
@@ -100,19 +116,19 @@
         <div class="columns">
             <div class="column has-text-centered">
                 <h2 class="subtitle">Java</h2>
-                <div class="copy-box" onclick="copyToClipboard('play.kersmc.nl')">IP: play.kersmc.nl 📋</div>
+                <div class="copy-box" onclick="copyToClipboard('play.kersmc.nl')">IP: play.kersmc.nl</div>
             </div>
             <div class="column has-text-centered">
                 <h2 class="subtitle">Bedrock</h2>
-                <div class="copy-box" onclick="copyToClipboard('play.kersmc.nl')">IP: play.kersmc.nl 📋</div>
-                <div class="copy-box" onclick="copyToClipboard('38364')">Poort: 38364 📋</div>
+                <div class="copy-box" onclick="copyToClipboard('play.kersmc.nl')">IP: play.kersmc.nl</div>
+                <div class="copy-box" onclick="copyToClipboard('38364')">Poort: 38364</div>
             </div>
         </div>
         <div class="red-line"></div>
         <h1 class="title">Regels</h1>
         <div class="rules-container">
             <div class="rules-box">
-                <h2>Algemene Regels</h2>
+                <h2>Algemeen</h2>
                 <ul>
                     <li><strong>Geen griefing:</strong> Breek, wijzig of vernietig nooit bouwwerken of items van anderen zonder toestemming.</li>
                     <li><strong>Geen diefstal:</strong> Stelen uit kisten, frames of andere containers is verboden.</li>
@@ -124,7 +140,7 @@
                 </ul>
             </div>
             <div class="rules-box">
-                <h2>PvP Regels – Hardcore</h2>
+                <h2>PvP</h2>
                 <ul>
                     <li><strong>Geen PvP-server:</strong> PvP mag alleen als het logisch past binnen de situatie.</li>
                     <li><strong>Toegestane PvP-situaties:</strong>
@@ -150,11 +166,7 @@
 
     <script>
         function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Gekopieerd: ' + text);
-            }).catch(err => {
-                console.error('Fout bij kopiëren:', err);
-            });
+            navigator.clipboard.writeText(text);
         }
     </script>
 
