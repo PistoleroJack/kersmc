@@ -176,12 +176,38 @@
             </a>
         </div>
         <div class="column is-narrow has-text-centered">
-            <a href="downloads/kersmc-modpack-curseforge.zip" class="button is-warning is-medium">
-                <img src="logos/curseforge.png" alt="Curseforge" style="height: 1.5em; margin-right: 8px;">Curseforge
-            </a>
-        </div>
+        <button onclick="openPopup()" class="button is-warning is-medium">
+            <img src="logo's/curseforge.png" alt="CurseForge" style="height: 1.5rem; margin-right: 0.5rem;">
+            CurseForge
+        </button>
     </div>
-</section>
+</div>
+
+<!-- Pop-up melding -->
+<div id="popup" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">⛏️ CurseForge Modpack nog niet beschikbaar</p>
+        </header>
+        <section class="modal-card-body">
+            We zijn nog druk bezig met het maken van de CurseForge modpack.  
+            Gebruik voor nu de <strong>Modrinth</strong> modpack of houd de <a href="/kersmc/discord">Discord</a> in de gaten voor updates!
+        </section>
+        <footer class="modal-card-foot is-justify-content-end">
+            <button class="button is-primary" onclick="closePopup()">Begrepen</button>
+        </footer>
+    </div>
+</div>
+
+<script>
+    function openPopup() {
+        document.getElementById("popup").classList.add("is-active");
+    }
+    function closePopup() {
+        document.getElementById("popup").classList.remove("is-active");
+    }
+</script>
 
 
     <script>
