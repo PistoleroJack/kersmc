@@ -62,8 +62,56 @@
     </section>
 
     <section class="section">
-        <p>Aan deze pagina wordt nog gewerkt.</p>
-    </section>
+    <h1 class="title has-text-centered">🎬 KersMC Content</h1>
+    <p class="subtitle has-text-centered">Bekijk hier de nieuwste video’s van onze communityleden!</p>
+
+    <div class="columns is-multiline is-centered mt-6">
+
+        <!-- Tieskuhh -->
+        <div class="column is-half">
+            <div class="box">
+                <h2 class="title is-4">📺 Tieskuhh</h2>
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/_gIIRnn-S3g" 
+                        title="YouTube video van Tieskuhh" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- MarsKoenker -->
+        <div class="column is-half">
+            <div class="box">
+                <h2 class="title is-4">📺 MarsKoenker</h2>
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/4HyJ8gHkXZA" 
+                        title="YouTube video van MarsKoenker" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+    
 
     <footer class="footer">
         <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
