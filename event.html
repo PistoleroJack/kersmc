@@ -62,8 +62,71 @@
     </section>
 
     <section class="section">
-        <p>Aan deze pagina wordt nog gewerkt.</p>
-    </section>
+  <!-- Aftelafbeelding en timer -->
+  <div class="has-text-centered">
+    <figure class="image is-3by1 mb-5" style="max-width: 1000px; margin: 0 auto;">
+      <img src="/kersmc/end-event.png" alt="End Event">
+    </figure>
+    <h2 class="title is-3" id="countdown">Nog ... dagen, ... uur, ... minuten en ... seconden!</h2>
+  </div>
+
+  <!-- Titel en inhoud -->
+  <div class="content mt-6">
+    <h1 class="title has-text-centered">End Event</h1>
+
+    <p><strong>Beste @-=- Speler -=-  van KersMC,</strong></p>
+
+    <p>Het moment waar velen op hebben gewacht is eindelijk daar...<br>
+    Op <strong>zaterdag 19 april om 19:30</strong> openen we de poorten naar <strong>The End</strong> – en jij kunt erbij zijn! 🌌</p>
+
+    <p><strong>🟣 De Enderdragon verslaan!</strong><br>
+    Het ultieme gevecht staat op ons te wachten. Verzamel je gear, roep je team bij elkaar en bereid je voor op een episch avontuur dat het lot van onze wereld zal bepalen.</p>
+
+    <h2 class="title is-4">⚔️ Wat kun je verwachten?</h2>
+    <ul>
+      <li>Een gezamenlijke strijd tegen de Enderdragon – we zijn 1 team!</li>
+      <li>Spanning, samenwerking en misschien wel chaos 🐉</li>
+      <li>Toegang tot The End na het event voor verdere verkenning, XP farms, Elytra’s en meer!</li>
+    </ul>
+
+    <p><strong>📩 Heb je vragen?</strong><br>
+    Open dan gerust een ticket via onze <a href="/kersmc/discord">Discord</a>. We helpen je graag!</p>
+
+    <p><strong>Wees erbij op zaterdag 19 april om 19:30 – dit is een moment dat je niet wilt missen.</strong><br>
+    Samen schrijven we geschiedenis op KersMC. 🍒</p>
+
+    <p><a href="https://discord.gg/74XrEQGq?event=1359178693381193848" class="button is-link is-medium mt-3">📅 Ga naar het Discord-event</a></p>
+
+    <p class="mt-5"><em>Inhoudelijke informatie volgt gedurende de aanloop naar het event.</em></p>
+  </div>
+</section>
+
+<script>
+  // Afteltimer naar zaterdag 19 april 2025 om 19:30
+  const eventDate = new Date("2025-04-19T19:30:00").getTime();
+  const countdownElement = document.getElementById("countdown");
+
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance < 0) {
+      countdownElement.textContent = "Het event is begonnen!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownElement.textContent = `Nog ${days} dagen, ${hours} uur, ${minutes} minuten en ${seconds} seconden!`;
+  };
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
 
     <footer class="footer">
         <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
