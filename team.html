@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KersMC</title>
+  <link rel="icon" type="image/png" href="logos/KersMC_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
+  <style>
+    .header-bar {
+      background-color: #ff0707;
+      color: white;
+      padding: 20px 10%;
+      text-align: center;
+      position: relative;
+    }
+
+    .login-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .main-title {
+      font-size: 3rem;
+      margin: 10px 0;
+      position: relative;
+    }
+
+    .ip-poort-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 150px;
+      margin-top: 10px;
+    }
+
+    .ip-button {
+      background-color: white;
+      color: black;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      user-select: none;
+    }
+
+    .ip-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .nav-buttons a {
+      text-decoration: none;
+    }
+
+    .section {
+      text-align: center;
+      padding: 60px 10% 80px 10%;
+      font-size: 1.2rem;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .gamemode-section {
+      margin-top: 60px;
+    }
+
+    .gamemode-box {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 20px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .gamemode-box h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f4f4f4;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <section class="header-bar">
+    <button class="login-button" onclick="window.location.href='/login'">Login</button>
+
+    <div class="ip-poort-container">
+      <div class="ip-button" onclick="copyText('Play.KersMC.nl')">IP: Play.KersMC.nl</div>
+      <h1 class="main-title"><a href="index.html" style="color: white; text-decoration: none;">KersMC</a></h1>
+      <div class="ip-button" onclick="copyText('37712')">Poort: 37712</div>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="/algemeen" class="button is-light">Algemeen</a>
+      <a href="/survival" class="button is-light">Survival</a>
+      <a href="/hardcore" class="button is-light">Hardcore</a>
+      <a href="/pixelmon" class="button is-light">Pixelmon</a>
+      <a href="/pvp" class="button is-light">PvP</a>
+      <a href="/content" class="button is-light">Content</a>
+      <a href="https://kersmc.tebex.com" target="_blank" class="button is-light">Shop</a>
+    </div>
+  </section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Eigenaren -->
+    <h1 class="title has-text-centered">Eigenaren</h1>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-half team-member">
+        <img src="team-members/Tieskuhh.png" alt="Tieskuhh">
+        <h2 class="title is-4">Tieskuhh</h2>
+        <p class="subtitle is-6">Lid sinds: 19 januari 2025</p>
+        <p>Placeholder</p>
+      </div>
+      <div class="column is-half team-member">
+        <img src="team-members/Tijn.png" alt="Tijn">
+        <h2 class="title is-4">Tijn</h2>
+        <p class="subtitle is-6">Lid sinds: 19 januari 2025</p>
+        <p>Placeholder</p>
+      </div>
+    </div>
+
+    <!-- Hoofd Moderator -->
+    <h1 class="title has-text-centered mt-6">Hoofd Moderator</h1>
+    <div class="columns is-centered">
+      <div class="column is-half team-member">
+        <img src="team-members/Marskoenker.png" alt="MarsKoenker">
+        <h2 class="title is-4">MarsKoenker</h2>
+        <p class="subtitle is-6">Lid sinds: 25 januari 2025</p>
+        <p>Placeholder</p>
+      </div>
+    </div>
+
+    <!-- Moderators -->
+    <h1 class="title has-text-centered mt-6">Moderator's</h1>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-half team-member">
+        <img src="team-members/Juultieee.jpeg" alt="xJuultieee_">
+        <h2 class="title is-4">xJuultieee_</h2>
+        <p class="subtitle is-6">Lid sinds: 15 februari 2025</p>
+        <p>Placeholder</p>
+      </div>
+      <div class="column is-half team-member">
+        <img src="team-members/Pistolerojack.png" alt="Pistolerojack">
+        <h2 class="title is-4">Pistolerojack</h2>
+        <p class="subtitle is-6">Lid sinds: 25 februari 2025</p>
+        <p>Ik ben iemand van de technische aspecten, zo bouw ik veel farms en maak ik vaak gebruik van redstone.
+        Niet alleen in Minecraft doe ik veel technische dingen, zo heb ik ook deze website gemaakt en ik zorg dat de website online blijft.
+        Mocht je vragen hebben kan je mij altijd bereiken via Discord.</p>
+      </div>
+      <div class="column is-half team-member">
+        <img src="team-members/kjell.png" alt="Kjell">
+        <h2 class="title is-4">Kjell</h2>
+        <p class="subtitle is-6">Lid sinds: 3 april 2025</p>
+        <p>Placeholder</p>
+      </div>
+    </div>
+
+    <!-- Jr. Moderators -->
+    <h1 class="title has-text-centered mt-6">Jr. Moderator's</h1>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-half team-member">
+        <img src="team-members/Christian.png" alt="Christian">
+        <h2 class="title is-4">Christian</h2>
+        <p class="subtitle is-6">Lid sinds: 8 april 2025</p>
+        <p>Placeholder</p>
+      </div>
+      <div class="column is-half team-member">
+        <img src="team-members/Jd.png" alt="Jd">
+        <h2 class="title is-4">Jd</h2>
+        <p class="subtitle is-6">Lid sinds: 8 april 2025</p>
+        <p>Placeholder</p>
+      </div>
+        <div class="column is-half team-member">
+        <img src="team-members/Malltix.png" alt="Jd">
+        <h2 class="title is-4">Malltix</h2>
+        <p class="subtitle is-6">Lid sinds: 23 april 2025</p>
+        <p>Placeholder</p>
+      </div>
+        <div class="column is-half team-member">
+        <img src="team-members/LikeAPizza.png" alt="Jd">
+        <h2 class="title is-4">Pizza</h2>
+        <p class="subtitle is-6">Lid sinds: 24 april 2025</p>
+        <p>Placeholder</p>
+      </div>
+    </div>
+
+    <!-- Interesse in staff -->
+    <div class="content has-text-centered mt-6">
+      <p><strong>Ook staff worden?</strong> Maak een ticket aan op de <a href="/kersmc/discord">Discord</a> server om alle eisen te horen.</p>
+    </div>
+
+  <footer class="footer">
+    <p>© 2025 KersMC. Alle rechten voorbehouden.</p>
+  </footer>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Gekopieerd: " + text);
+      }).catch(err => {
+        alert("Kopiëren mislukt: " + err);
+      });
+    }
+  </script>
+</body>
+</html>
