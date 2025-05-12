@@ -3,37 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pagina niet gevonden</title>
+  <title>404 - Pagina niet gevonden</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff0f0;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
       text-align: center;
+      padding: 50px 20px;
+      background-color: #fff0f0;
+      font-family: Arial, sans-serif;
     }
     h1 {
-      font-size: 4rem;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
       color: #d70000;
     }
-    p {
-      font-size: 1.5rem;
+    .divider {
+      border-top: 2px solid #ccc;
+      margin: 30px auto;
+      max-width: 700px;
     }
-    a {
-      color: #d70000;
+    .columns {
+      margin-top: 20px;
+    }
+    .column img {
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .button.is-kers {
+      background-color: #ff0707;
+      color: white;
       font-weight: bold;
-      text-decoration: none;
+    }
+    .button.is-etheron {
+      background-color: #000000;
+      color: white;
+      font-weight: bold;
+    }
+    .discord-hint {
+      margin-top: 40px;
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
-  <h1>404</h1>
-  <p>Oeps! Deze pagina bestaat niet.</p>
-  <p><a href="/">Terug naar de hoofdpagina</a></p>
+
+  <h1>Oeps, deze pagina bestaat niet!</h1>
+  <div class="divider"></div>
+
+  <div class="columns is-centered">
+    <div class="column is-4">
+      <img src="/logos/KersMC_logo.png" alt="KersMC Logo">
+      <p><a href="/" class="button is-kers is-medium">KersMC.nl</a></p>
+    </div>
+    <div class="column is-4">
+      <img src="/logos/etheron-logo.png" alt="Etheron Logo">
+      <p><a href="https://etheron.nl" class="button is-etheron is-medium">Etheron.nl</a></p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <p class="discord-hint">
+    Lukt het nog steeds niet? Vraag om hulp in de Discord.<br>
+    <a href="/discord" class="button is-link is-medium" style="margin-top: 10px;">kersmc.nl/discord</a>
+  </p>
+
 </body>
 </html>
