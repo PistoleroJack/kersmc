@@ -7,67 +7,110 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
   <style>
     body {
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #fff0f0;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
+
+    .main-container {
+      padding: 5vh 5vw;
+      text-align: center;
+    }
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
+      font-size: 4vw;
       color: #d70000;
+      margin-bottom: 4vh;
     }
+
     .divider {
       border-top: 2px solid #ccc;
-      margin: 30px auto;
-      max-width: 700px;
+      margin: 4vh auto;
+      max-width: 80%;
     }
+
     .columns {
-      margin-top: 20px;
+      margin-top: 4vh;
+      align-items: center;
+      justify-content: center;
     }
+
     .column img {
-      max-width: 150px;
+      max-width: 12vw;
       height: auto;
-      margin-bottom: 15px;
+      margin-bottom: 2vh;
     }
+
     .button.is-kers {
       background-color: #ff0707;
       color: white;
       font-weight: bold;
+      font-size: 1.5vw;
     }
+
     .button.is-etheron {
       background-color: #000000;
       color: white;
       font-weight: bold;
+      font-size: 1.5vw;
     }
+
     .discord-hint {
-      margin-top: 40px;
-      font-size: 1.1rem;
+      margin-top: 5vh;
+      font-size: 1.5vw;
+    }
+
+    .divider-vertical {
+      border-left: 2px solid #ccc;
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .column img {
+        max-width: 100px;
+      }
+      .button {
+        font-size: 1rem !important;
+      }
+      .discord-hint {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="main-container">
+    <h1>Oeps, deze pagina bestaat niet!</h1>
+    <div class="divider"></div>
 
-  <h1>Oeps, deze pagina bestaat niet!</h1>
-  <div class="divider"></div>
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-4">
+        <img src="/logos/KersMC_logo.png" alt="KersMC Logo">
+        <p><a href="/" class="button is-kers is-large">KersMC.nl</a></p>
+      </div>
 
-  <div class="columns is-centered">
-    <div class="column is-4">
-      <img src="/logos/KersMC_logo.png" alt="KersMC Logo">
-      <p><a href="/" class="button is-kers is-medium">KersMC.nl</a></p>
+      <div class="divider-vertical"></div>
+
+      <div class="column is-4">
+        <img src="/logos/etheron-logo.png" alt="Etheron Logo">
+        <p><a href="https://etheron.nl" class="button is-etheron is-large">Etheron.nl</a></p>
+      </div>
     </div>
-    <div class="column is-4">
-      <img src="/logos/etheron-logo.png" alt="Etheron Logo">
-      <p><a href="https://etheron.nl" class="button is-etheron is-medium">Etheron.nl</a></p>
-    </div>
+
+    <div class="divider"></div>
+
+    <p class="discord-hint">
+      Lukt het nog steeds niet? Vraag om hulp in onze Discord.<br>
+      <a href="/discord" class="button is-link is-medium" style="margin-top: 10px;">Discord</a>
+    </p>
   </div>
-
-  <div class="divider"></div>
-
-  <p class="discord-hint">
-    Lukt het nog steeds niet? Vraag om hulp in de Discord.<br>
-    <a href="/discord" class="button is-link is-medium" style="margin-top: 10px;">kersmc.nl/discord</a>
-  </p>
-
 </body>
 </html>
