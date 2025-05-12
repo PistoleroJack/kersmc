@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KersMC x Etheron</title>
+  <title>KersMC - Etheron</title>
   <link rel="icon" type="image/png" href="/logos/KersMC_logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
   <style>
@@ -61,7 +61,13 @@
     }
     .section {
       text-align: center;
-      padding: 50px;
+      padding: 50px 20px;
+    }
+    .etheron-image {
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
     }
     .footer {
       text-align: center;
@@ -69,19 +75,12 @@
       background-color: #f4f4f4;
       margin-top: 50px;
     }
-    .etheron-image {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 40px;
-    }
-    .etheron-text h2 {
-      margin-top: 40px;
-      font-size: 2rem;
-    }
-    .etheron-text p {
+    .text-container {
       max-width: 800px;
-      margin: 0 auto 30px;
+      margin: 0 auto;
+      text-align: left;
       font-size: 1.2rem;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -90,7 +89,7 @@
     <button class="login-button" onclick="window.location.href='/login'">Login</button>
     <div class="ip-poort-container">
       <div class="ip-button" onclick="copyText('Play.KersMC.nl')">IP: Play.KersMC.nl</div>
-      <h1 class="main-title"><a href="/index" style="color: white; text-decoration: none;">KersMC</a></h1>
+      <h1 class="main-title"><a href="index.html" style="color: white; text-decoration: none;">KersMC</a></h1>
       <div class="ip-button" onclick="copyText('37712')">Poort: 37712</div>
     </div>
     <div class="nav-buttons">
@@ -105,16 +104,18 @@
 
   <section class="section">
     <img src="/logos/EtheronXKersMC.png" alt="KersMC x Etheron" class="etheron-image">
-
-    <div class="etheron-text">
-      <h2>Wij maken het mogelijk</h2>
+    
+    <div class="text-container">
+      <h2 class="title is-3">Wij maken het mogelijk</h2>
       <p>Wij, als klein bedrijf gevestigd in Alkmaar, zorgen aan de voorkant voor betaalbare diensten, met een kwalitatieve achterkant. Kleine of grote klant, bij ons krijg je het volledige pakket.</p>
 
-      <h2>Wie zijn wij?</h2>
+      <h3 class="title is-4" style="margin-top: 30px;">Wie zijn wij?</h3>
       <p>Met een team van inmiddels 6 man sterk bieden wij sinds 2019 betaalbare hosting aan. We zijn echt gepassioneerd over wat we doen en we willen onze klanten de beste service bieden zonder dat het een rib uit hun lijf kost. We zijn een hecht team en we zijn er trots op dat we een rol spelen in het helpen van bedrijven en individuen om online succesvol te zijn. Dus als je op zoek bent naar betrouwbare hosting zonder gedoe, dan ben je bij ons aan het juiste adres!</p>
 
-      <h2>Ons doel</h2>
+      <h3 class="title is-4" style="margin-top: 30px;">Ons doel</h3>
       <p>Sinds 2019 is onze missie om kwalitatieve hosting te leveren waarbij je altijd op ons kunt rekenen. Je kunt snelle hulp verwachten en er zijn eindeloze mogelijkheden. Onze servers staan allemaal in Nederland. Hierdoor kunnen we optimale connectiviteit garanderen.</p>
+
+      <p style="font-size: 0.9rem; color: gray; margin-top: 20px;">Bron: <a href="https://etheron.nl/over" target="_blank">etheron.nl/over</a></p>
     </div>
   </section>
 
